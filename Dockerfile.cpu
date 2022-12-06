@@ -1,0 +1,3 @@
+FROM tensorflow/tensorflow:latest
+
+RUN pip install easyocr python-multipart fastapi "uvicorn[standard]"
