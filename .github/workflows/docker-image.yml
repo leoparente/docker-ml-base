@@ -28,7 +28,7 @@ jobs:
       - name: Build and push CPU image
         uses: docker/build-push-action@v3
         with:
-          context: .
+          context: ${{github.workspace}}
           file: Dockerfile.cpu
           push: true
           tags: leoparente/ml-base:cpu-latest
@@ -36,7 +36,7 @@ jobs:
       - name: Build and push GPU image
         uses: docker/build-push-action@v3
         with:
-          context: .
+          context: ${{github.workspace}}
           file: Dockerfile.gpu
           push: true
           tags: leoparente/ml-base:gpu-latest
