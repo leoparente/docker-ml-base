@@ -1,5 +1,9 @@
 FROM tensorflow/tensorflow:latest
 
-RUN pip install easyocr python-multipart fastapi "uvicorn[standard]"
+RUN pip install fastapi "uvicorn[standard]"
+
+RUN pip install easyocr
+
+RUN pip install python-multipart
 
 RUN python -c "import easyocr;easyocr.Reader(['pt','en'])"
