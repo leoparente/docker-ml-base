@@ -3,3 +3,5 @@
 FROM tensorflow/tensorflow:latest-gpu
 
 RUN pip install easyocr python-multipart fastapi "uvicorn[standard]"
+
+RUN python -c "import easyocr;easyocr.Reader(['pt','en'])"
