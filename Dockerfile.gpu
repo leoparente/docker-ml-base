@@ -7,9 +7,3 @@ RUN pip install fastapi "uvicorn[standard]"
 RUN pip install easyocr
 
 RUN pip install python-multipart
-
-ENV LD_LIBRARY_PATH="/usr/local/lib/python3.8/site-packages/nvidia/cublas/lib/:${LD_LIBRARY_PATH}"
-
-RUN ldconfig
-
-RUN python -c "import easyocr;easyocr.Reader(['pt','en'])"
