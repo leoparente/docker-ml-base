@@ -4,10 +4,10 @@ RUN pip install fastapi "uvicorn[standard]"
 
 RUN pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cpu
 
+RUN pip install ultralytics
+
 RUN pip install easyocr
 
 RUN pip install python-multipart
-
-RUN pip install ultralytics
 
 RUN python -c "import easyocr;easyocr.Reader(['pt','en'])"
