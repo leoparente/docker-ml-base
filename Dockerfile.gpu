@@ -10,4 +10,6 @@ RUN pip install easyocr
 
 RUN pip install python-multipart
 
+RUN pip install ultralytics
+
 RUN python -c "import easyocr;easyocr.Reader(['pt','en'])"
